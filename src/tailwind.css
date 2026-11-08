@@ -9,6 +9,14 @@
         padding: '16px',
     }
 
+html, body {
+    width: 100%;
+    max-width: 100%;
+}
+
+body {
+    overflow-x: clip;
+}
 
 .navbar-fixed {
     @apply fixed z-999 bg-white/70;
