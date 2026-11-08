@@ -7,13 +7,19 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "prettier": "^3.9.10",
+    "prettier-plugin-tailwindcss": "^0.8.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev" : "npx @tailwindcss/cli -i ./src/tailwind.css -o ./public/css/output.css --watch"
+    "dev": "npx @tailwindcss/cli -i ./src/tailwind.css -o ./public/css/output.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "allowScripts": {
+    "@parcel/watcher@2.5.1": true
+  }
 }

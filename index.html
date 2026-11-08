@@ -1,383 +1,924 @@
-<!DOCTYPE html>
-<html lang="en" class="screens-[1320px]">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="en" class="screens-[1320px] scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="public/css/output.css">
-</head>
-<body>
+    <link rel="stylesheet" href="public/css/output.css" />
+  </head>
 
-    
-<!-- Header Start -->
- <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10 transition-all duration-300 ease-in-out">
-    <div class="container mx-auto max-w-7xl">
-        <div class="flex justify-between items-center pl-4 py-5">
+  <body>
+    <!-- Header Start -->
+    <header
+      class="absolute top-0 left-0 z-10 flex w-full items-center bg-transparent transition-all duration-300 ease-in-out"
+    >
+      <div class="container mx-auto max-w-7xl">
+        <div class="flex items-center justify-between py-5 pl-4">
+          <div>
+            <a href="#home" class="text-rose-700 dark:text-rose-400">
+              <svg
+                role="img"
+                width="36"
+                height="36"
+                class="fill-current"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Decap CMS</title>
+                <path
+                  d="M18.947 13.177c0 3.263-2 5.649-4.736 5.649h-2.773v-5.65H6.282v10.387h7.93c5.403 0 9.788-4.668 9.788-10.386h-5.052ZM7.894.476 0 1.212l.948 10.352 5.157-.456-.526-5.615 2.737-.245c2.737-.246 4.91 1.93 5.227 5.193l5.052-.458c-.49-5.752-5.297-9.998-10.7-9.507Z"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div class="flex items-center px-4">
+            <button
+              id="hamburger"
+              name="hamburger"
+              type="button"
+              class="absolute top-4 right-4 block cursor-pointer lg:hidden"
+            >
+              <span
+                class="hamburger-line origin-top-left transition duration-300 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line transition duration-300 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"
+              ></span>
+            </button>
+
+            <nav
+              id="nav-menu"
+              class="absolute top-full right-4 hidden w-full max-w-62.5 rounded-lg bg-white py-5 shadow-lg lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none dark:bg-mauve-950 dark:shadow-mauve-600 lg:dark:bg-transparent"
+            >
+              <ul class="block cursor-pointer lg:flex">
+                <li class="group">
+                  <a href="#home" class="point">Home</a>
+                </li>
+                <li class="group">
+                  <a href="#about" class="point">About Me</a>
+                </li>
+                <li class="group">
+                  <a href="#portfolio" class="point">Portfolio</a>
+                </li>
+                <li class="group">
+                  <a href="#clients" class="point">Clients</a>
+                </li>
+                <li class="group">
+                  <a href="#blog" class="point">Blog</a>
+                </li>
+                <li class="group">
+                  <a href="#contact" class="point">Contact</a>
+                </li>
+                <li class="mt-3 flex items-center pl-8">
+                  <div class="flex items-center">
+                    <span class="mr-2 text-sm text-mauve-500">Light</span>
+
+                    <input
+                      type="checkbox"
+                      class="peer hidden"
+                      id="dark-toggle"
+                    />
+
+                    <label for="dark-toggle" class="cursor-pointer">
+                      <div
+                        class="flex h-5 w-9 items-center rounded-full bg-mauve-500 p-1"
+                      >
+                        <div
+                          class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out peer-checked:translate-x-4"
+                        ></div>
+                      </div>
+                    </label>
+
+                    <span class="ml-2 text-sm text-mauve-500">Dark</span>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Start -->
+    <section id="home" class="font-semibold dark:bg-mauve-950">
+      <div class="container mx-auto max-w-7xl">
+        <div class="flex flex-wrap">
+          <div class="w-full self-center px-4 lg:w-1/2">
+            <h2
+              class="mt-22 h-full w-full text-xl font-bold lg:text-[26px] dark:text-rose-400"
+            >
+              Hello Everyone, I'm
+              <span
+                class="block text-4xl text-rose-700 lg:text-[43px] dark:text-white"
+                >Dela Tri Ramadhani Hasibuan</span
+              >
+            </h2>
+            <h3 class="font-mono lg:text-xl dark:text-stone-600">
+              Web Developer & Content Creator
+            </h3>
+            <p class="mt-4 mb-10 text-mist-700 dark:text-stone-600">
+              "Have a <span class="font-bold dark:text-white">Courage</span> and
+              <span class="font-bold dark:text-white">Be Kind!</span>"
+            </p>
+
             <div>
-                <a href="#home" class="text-rose-700">
-                    <svg role="img" width="36" height="36" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <title>Decap CMS</title><path d="M18.947 13.177c0 3.263-2 5.649-4.736 5.649h-2.773v-5.65H6.282v10.387h7.93c5.403 0 9.788-4.668 9.788-10.386h-5.052ZM7.894.476 0 1.212l.948 10.352 5.157-.456-.526-5.615 2.737-.245c2.737-.246 4.91 1.93 5.227 5.193l5.052-.458c-.49-5.752-5.297-9.998-10.7-9.507Z"/></svg>
-                </a>
+              <a
+                href="https://instagram.com/delatriramadhani"
+                class="rounded-2xl bg-rose-700 px-8 py-3 text-base text-white transition ease-in-out hover:rounded-4xl hover:opacity-80 hover:shadow-lg dark:bg-rose-400"
+                >Contact Me</a
+              >
             </div>
+          </div>
 
-            <div class="flex items-center px-4">
-                <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 top-4 lg:hidden cursor-pointer">
-                    <span class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
-                    <span class="hamburger-line transition duration-300 ease-in-out"></span>
-                    <span class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
-                </button>
-
-                <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-62.5 w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
-                    <ul class="block lg:flex">
-                        <li class="group">
-                            <a href="#home" class="point">Home</a>
-                        </li>
-                        <li class="group">
-                            <a href="#about" class="point">About Me</a>
-                        </li>
-                        <li class="group">
-                            <a href="#portfolio" class="point">Portfolio</a>
-                        </li>
-                        <li class="group">
-                            <a href="#clients" class="point">Clients</a>
-                        </li>
-                        <li class="group">
-                            <a href="#blog" class="point">Blog</a>
-                        </li>
-                        <li class="group">
-                            <a href="#contact" class="point">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
+          <div class="w-full self-end px-4 lg:w-1/2">
+            <div class="relative isolate lg:right-0 lg:mt-9">
+              <img
+                src="dist/img/dela.png"
+                alt="Dela Tri Ramadhani Hasibuan"
+                class="relative mx-auto h-auto max-w-full"
+              />
+              <span
+                class="absolute bottom-5 left-1/2 -z-10 w-full max-w-125 -translate-x-1/2 overflow-hidden md:scale-125 lg:-right-40"
+              >
+                <svg
+                  width="500"
+                  height="600"
+                  viewBox="0 0 200 200"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="fill-rose-700 dark:fill-rose-400"
+                    d="M33.8,-25.2C41.7,-5.8,44.5,10.7,38,29.7C31.5,48.7,15.8,70.1,-2.1,71.3C-20,72.5,-40,53.6,-52.5,31.1C-65,8.7,-69.9,-17.3,-59.9,-37.8C-49.9,-58.4,-25,-73.6,-6,-70.2C13,-66.7,25.9,-44.6,33.8,-25.2Z"
+                    transform="translate(100 100)"
+                    transform="translate(100 100) scale(1.1)"
+                  />
+                </svg>
+              </span>
             </div>
+          </div>
         </div>
-    </div>
- </header>
-<!-- Header End -->
+      </div>
+    </section>
+    <!-- Hero Section End -->
 
-<!-- Hero Section Start -->
-<section id="home" class="font-semibold">
-    <div class="container mx-auto max-w-7xl">
+    <!-- About Section Start -->
+    <section id="about" class="pt-36 pb-32 font-semibold dark:bg-mauve-950">
+      <div class="container mx-auto max-w-7xl">
         <div class="flex flex-wrap">
-            <div class="w-full self-center px-4 lg:w-1/2">
-                 <h2 class="w-full h-full mt-22 text-xl font-bold lg:text-[26px]">Hello Everyone, I'm <span class="block text-4xl text-rose-700 lg:text-[43px]">Dela Tri Ramadhani Hasibuan</span></h2>
-                <h3 class="font-mono lg:text-xl">Web Developer & Content Creator</h3>
-                <p class="mt-4 mb-10 text-mist-700">"Have a <span class="font-bold">Courage</span> and <span class="font-bold">Be Kind!</span>"</p>
-            
-                    <div><a href="https://instagram.com/delatriramadhani" class="text-base bg-rose-700 text-white py-3 px-8 rounded-2xl hover:opacity-80 hover:shadow-lg hover:rounded-4xl transition ease-in-out">Contact Me</a></div>
-                </div>
+          <div class="mb-10 w-full px-4 lg:w-1/2">
+            <h4
+              class="text-base font-bold text-rose-700 uppercase lg:text-xl dark:text-rose-400"
+            >
+              About Me
+            </h4>
+            <h2
+              class="mt-4 max-w-md text-2xl font-bold lg:text-4xl dark:text-white"
+            >
+              Let's Learn Together!
+            </h2>
+            <p
+              class="mt-4 max-w-xl text-mist-700 lg:text-lg dark:text-stone-600"
+            >
+              I am a passionate web developer and content creator with a love
+              for sharing knowledge and helping others grow in their coding
+              journey. I believe in the power of community and continuous
+              learning.
+            </p>
+          </div>
 
-            <div class="w-full self-end px-4 lg:w-1/2">
-                <div class="relative lg:mt-9 lg:right-0">
-                    <img src="dist/img/dela.png" alt="Dela Tri Ramadhani Hasibuan" class="mx-auto max-w-full h-auto">
-                    <span class="absolute bottom-5 -z-10 left-1/2 -translate-x-1/2 md:scale-125 w-full max-w-125 overflow-hidden lg:-right-40">
-                    <svg width="500" height="600" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="#c70036" d="M33.8,-25.2C41.7,-5.8,44.5,10.7,38,29.7C31.5,48.7,15.8,70.1,-2.1,71.3C-20,72.5,-40,53.6,-52.5,31.1C-65,8.7,-69.9,-17.3,-59.9,-37.8C-49.9,-58.4,-25,-73.6,-6,-70.2C13,-66.7,25.9,-44.6,33.8,-25.2Z" transform="translate(100 100)" transform="translate(100 100) scale(1.1)" />
-                    </svg>
-                    </span>
-                </div>
+          <div class="w-full px-4 lg:w-1/2">
+            <h3
+              class="mt-4 text-xl font-bold lg:pt-10 lg:text-3xl dark:text-white"
+            >
+              Let's Be Friends!
+            </h3>
+            <p class="mt-4 mb-6 text-mist-700 lg:text-lg dark:text-stone-600">
+              Feel free to connect with me on social media or reach out for
+              collaborations. I am always open to new opportunities and love
+              meeting like-minded individuals.
+            </p>
+
+            <div class="flex items-center">
+              <!-- Youtube -->
+              <a
+                href="https://youtube.com/@delatriramadhani1222"
+                target="_blank"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-mist-500 text-mist-500 hover:border-rose-700 hover:bg-rose-700 hover:text-white dark:border-stone-600 dark:text-stone-600 dark:hover:border-rose-400 dark:hover:bg-rose-400"
+              >
+                <svg
+                  role="img"
+                  class="fill-current"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>YouTube</title>
+                  <path
+                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                  />
+                </svg>
+              </a>
+
+              <!-- Instagram -->
+              <a
+                href="https://instagram.com/delatriramadhani"
+                target="_blank"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-mist-500 text-mist-500 hover:border-rose-700 hover:bg-rose-700 hover:text-white dark:border-stone-600 dark:text-stone-600 dark:hover:border-rose-400 dark:hover:bg-rose-400"
+              >
+                <svg
+                  role="img"
+                  class="fill-current"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Instagram</title>
+                  <path
+                    d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"
+                  />
+                </svg>
+              </a>
+
+              <!-- LinkedIn -->
+              <a
+                href="https://www.linkedin.com/in/dela-tri-ramadhani-hasibuan-658271425/"
+                target="_blank"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-mist-500 text-mist-500 hover:border-rose-700 hover:bg-rose-700 hover:text-white dark:border-stone-600 dark:text-stone-600 dark:hover:border-rose-400 dark:hover:bg-rose-400"
+              >
+                <svg
+                  role="img"
+                  class="fill-current"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>LinkedIn</title>
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.889z"
+                  />
+                </svg>
+              </a>
+
+              <!-- TikTok -->
+              <a
+                href="https://www.tiktok.com/@delaaa.9"
+                target="_blank"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-mist-500 text-mist-500 hover:border-rose-700 hover:bg-rose-700 hover:text-white dark:border-stone-600 dark:text-stone-600 dark:hover:border-rose-400 dark:hover:bg-rose-400"
+              >
+                <svg
+                  role="img"
+                  class="fill-current"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>TikTok</title>
+                  <path
+                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
+                  />
+                </svg>
+              </a>
+
+              <!-- Gmail -->
+              <a
+                href="https://mail.google.com/mail/u/0/#inbox"
+                target="_blank"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-mist-500 text-mist-500 hover:border-rose-700 hover:bg-rose-700 hover:text-white dark:border-stone-600 dark:text-stone-600 dark:hover:border-rose-400 dark:hover:bg-rose-400"
+              >
+                <svg
+                  role="img"
+                  class="fill-current"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Gmail</title>
+                  <path
+                    d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"
+                  />
+                </svg>
+              </a>
             </div>
+          </div>
         </div>
-    </div>
-</section>
-<!-- Hero Section End -->
+      </div>
+    </section>
+    <!-- About Section End -->
 
-<!-- About Section Start -->
- <section id="about" class="font-semibold pt-36 pb-32">
-    <div class="container mx-auto max-w-7xl">
-        <div class="flex flex-wrap">
-            <div class="w-full px-4 mb-10 lg:w-1/2">
-                <h4 class="text-rose-700 text-base font-bold uppercase lg:text-xl">About Me</h4>
-                <h2 class="text-2xl font-bold mt-4 max-w-md lg:text-4xl">Let's Learn Together!</h2>
-                <p class="mt-4 text-mist-700 max-w-xl lg:text-lg">I am a passionate web developer and content creator with a love for sharing knowledge and helping others grow in their coding journey. I believe in the power of community and continuous learning.</p>
-            </div>
-
-            <div class="w-full px-4 lg:w-1/2">
-                <h3 class="text-xl font-bold mt-4 lg:text-3xl lg:pt-10">Let's Be Friends!</h3>
-                <p class="mt-4 text-mist-700 mb-6 lg:text-lg">Feel free to connect with me on social media or reach out for collaborations. I am always open to new opportunities and love meeting like-minded individuals.</p>
-                
-                <div class="flex items-center">
-                    <!-- Youtube -->
-                     <a href="https://youtube.com/@delatriramadhani1222" target="_blank" class="w-9 h-9 mr-3 rounded-full text-mist-500 flex justify-center items-center border border-mist-500 hover:border-rose-700 hover:bg-rose-700 hover:text-white" >
-                        <svg role="img" class="fill-current" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <title>YouTube</title>
-                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                     </a>
-
-                    <!-- Instagram -->
-                     <a href="https://instagram.com/delatriramadhani" target="_blank" class="w-9 h-9 mr-3 rounded-full text-mist-500 flex justify-center items-center border border-mist-500 hover:border-rose-700 hover:bg-rose-700 hover:text-white" >
-                        <svg role="img" class="fill-current" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>
-                     </a>
-
-                     <!-- LinkedIn -->
-                     <a href="https://www.linkedin.com/in/dela-tri-ramadhani-hasibuan-658271425/" target="_blank" class="w-9 h-9 mr-3 rounded-full text-mist-500 flex justify-center items-center border border-mist-500 hover:border-rose-700 hover:bg-rose-700 hover:text-white" >
-                        <svg role="img" class="fill-current" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <title>LinkedIn</title>
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.889z"/></svg>
-                     </a>
-
-                     <!-- TikTok -->
-                     <a href="https://www.tiktok.com/@delaaa.9" target="_blank" class="w-9 h-9 mr-3 rounded-full text-mist-500 flex justify-center items-center border border-mist-500 hover:border-rose-700 hover:bg-rose-700 hover:text-white" >
-                        <svg role="img" class="fill-current" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>TikTok</title><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
-                     </a>
-
-                     <!-- Gmail -->
-                     <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" class="w-9 h-9 mr-3 rounded-full text-mist-500 flex justify-center items-center border border-mist-500 hover:border-rose-700 hover:bg-rose-700 hover:text-white" >
-                        <svg role="img" class="fill-current" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Gmail</title><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
-                     </a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
- </section>
- <!-- About Section End -->
-
-<!-- Portfolio Section Start -->
- <section id="portfolio" class="font-semibold pt-36 pb-16 bg-rose-100">
-    <div class="container mx-auto max-w-7xl">
+    <!-- Portfolio Section Start -->
+    <section
+      id="portfolio"
+      class="bg-rose-100 pt-36 pb-16 font-semibold dark:bg-mauve-900"
+    >
+      <div class="container mx-auto max-w-7xl">
         <div>
-            <div class="max-w-xl mx-auto text-center mb-16">
-                <h4 class="text-lg text-rose-700 mb-2 lg:text-2xl">Portfolio</h4>
-                <h2 class="font-bold text-mist-700 text-3xl mb-4 sm:text-4xl lg:text-5xl">Experiences and Achievements</h2>
-                <p class="font-medium text-md text-mist-700 md:text-lg">Here are some of my experiences and achievements that I'm proud of. I have gained valuable skills and knowledge through these experiences. And I'm excited to continue learning and growing in my field.</p>
-            </div>
+          <div class="mx-auto mb-16 max-w-xl text-center">
+            <h4
+              class="mb-2 text-lg text-rose-700 lg:text-2xl dark:text-rose-400"
+            >
+              Portfolio
+            </h4>
+            <h2
+              class="mb-4 text-3xl font-bold text-mist-700 sm:text-4xl lg:text-5xl dark:text-white"
+            >
+              Experiences and Achievements
+            </h2>
+            <p
+              class="text-md font-medium text-mist-700 md:text-lg dark:text-stone-600"
+            >
+              Here are some of my experiences and achievements that I'm proud
+              of. I have gained valuable skills and knowledge through these
+              experiences. And I'm excited to continue learning and growing in
+              my field.
+            </p>
+          </div>
         </div>
 
-        <div class="w-full px-4 flex flex-wrap justify-center">
-            <div class="mb-12 p-4 md:w-1/2">
-                <div class="rounded-md shadow-md overflow-hidden">
-                    <img src="dist/img/portfolio/1.png" alt="Research" width="w-full">
-                    <h3 class="text-xl text-mist-900 mt-5 mb-3">Dela's Research</h3>
-                        <p class="text-mist-700 font-medium text-base">Dela's research focuses on developing innovative solutions for sustainable agriculture. That's what I'm passionate about.</p>
-                </div>
+        <div class="flex w-full flex-wrap justify-center px-4">
+          <div class="mb-12 p-4 md:w-1/2">
+            <div
+              class="overflow-hidden rounded-md shadow-md dark:shadow-mauve-600"
+            >
+              <img
+                src="dist/img/portfolio/1.png"
+                alt="Research"
+                width="w-full"
+              />
+              <h3 class="mt-5 mb-3 p-2 text-xl text-mist-900 dark:text-white">
+                Dela's Research
+              </h3>
+              <p
+                class="p-2 text-base font-medium text-mist-700 dark:text-stone-600"
+              >
+                Dela's research focuses on developing innovative solutions for
+                sustainable agriculture. That's what I'm passionate about.
+              </p>
             </div>
-            <div class="mb-12 p-4 md:w-1/2">
-                <div class="rounded-md shadow-md overflow-hidden">
-                    <img src="dist/img/portfolio/2.png" alt="Research" width="w-full">
-                    <h3 class="text-xl text-mist-900 mt-5 mb-3">Dela's Internship</h3>
-                        <p class="text-mist-700 font-medium text-base">Dela's internship experience provided valuable insights into the industry and helped develop practical skills.</p>
-                </div>
+          </div>
+          <div class="mb-12 p-4 md:w-1/2">
+            <div
+              class="overflow-hidden rounded-md shadow-md dark:shadow-mauve-600"
+            >
+              <img
+                src="dist/img/portfolio/2.png"
+                alt="Research"
+                width="w-full"
+              />
+              <h3 class="mt-5 mb-3 p-2 text-xl text-mist-900 dark:text-white">
+                Dela's Internship
+              </h3>
+              <p
+                class="p-2 text-base font-medium text-mist-700 dark:text-stone-600"
+              >
+                Dela's internship experience provided valuable insights into the
+                industry and helped develop practical skills.
+              </p>
             </div>
-            <div class="mb-12 p-4 md:w-1/2">
-                <div class="rounded-md shadow-md overflow-hidden">
-                    <img src="dist/img/portfolio/5.png" alt="Research" width="w-full">
-                    <h3 class="text-xl text-mist-900 mt-5 mb-3">Dela's Award</h3>
-                        <p class="text-mist-700 font-medium text-base">The Best Presenter of International Conference about Agriculture</p>
-                </div>
+          </div>
+          <div class="mb-12 p-4 md:w-1/2">
+            <div
+              class="overflow-hidden rounded-md shadow-md dark:shadow-mauve-600"
+            >
+              <img
+                src="dist/img/portfolio/5.png"
+                alt="Research"
+                width="w-full"
+              />
+              <h3 class="mt-5 mb-3 p-2 text-xl text-mist-900 dark:text-white">
+                Dela's Award
+              </h3>
+              <p
+                class="p-2 text-base font-medium text-mist-700 dark:text-stone-600"
+              >
+                The Best Presenter of International Conference about Agriculture
+              </p>
             </div>
-            <div class="mb-12 p-4 md:w-1/2">
-                <div class="rounded-md shadow-md overflow-hidden">
-                    <img src="dist/img/portfolio/4.png" alt="Research" width="w-full">
-                    <h3 class="text-xl text-mist-900 mt-5 mb-3">Dela's Research</h3>
-                        <p class="text-mist-700 font-medium text-base">International Workshop on Sustainable Agriculture. Do the research in the laboratory.</p>
-                </div>
+          </div>
+          <div class="mb-12 p-4 md:w-1/2">
+            <div
+              class="overflow-hidden rounded-md shadow-md dark:shadow-mauve-600"
+            >
+              <img
+                src="dist/img/portfolio/4.png"
+                alt="Research"
+                width="w-full"
+              />
+              <h3 class="mt-5 mb-3 p-2 text-xl text-mist-900 dark:text-white">
+                Dela's Workshop
+              </h3>
+              <p
+                class="p-2 text-base font-medium text-mist-700 dark:text-stone-600"
+              >
+                International Workshop on Sustainable Agriculture. Do the
+                research in the laboratory.
+              </p>
             </div>
+          </div>
         </div>
-    </div>
- </section>
-<!-- Portfolio Section End -->
+      </div>
+    </section>
+    <!-- Portfolio Section End -->
 
-<!-- Clients Section Start -->
- <section id="clients" class="font-semibold pt-36 pb-32 bg-dark">
-    <div class="container mx-auto max-w-7xl">
+    <!-- Clients Section Start -->
+    <section
+      id="clients"
+      class="bg-dark pt-36 pb-32 font-semibold dark:bg-mauve-300"
+    >
+      <div class="container mx-auto max-w-7xl">
         <div class="w-full px-4">
-            <div class="mx-auto text-center mb-16 justify-center">
-                <h4 class="text-lg text-rose-700 mb-2 lg:text-2xl">Clients</h4>
-                <h2 class="text-3xl font-bold text-stone-600 mb-4 sm:text-4xl lg:text-5xl">The Companies We've Worked With</h2>
-                <p class="text-stone-600 font-medium max-w-xl m-auto text-center text-md md:text-lg">We've had the privilege of working with several innovative companies in the agricultural sector. Feel free to explore our client list below.</p>
-            </div>
+          <div class="mx-auto mb-16 justify-center text-center">
+            <h4 class="mb-2 text-lg text-rose-700 lg:text-2xl">Clients</h4>
+            <h2
+              class="mb-4 text-3xl font-bold text-stone-600 sm:text-4xl lg:text-5xl dark:text-stone-900"
+            >
+              The Companies We've Worked With
+            </h2>
+            <p
+              class="text-md m-auto max-w-xl text-center font-medium text-stone-600 md:text-lg"
+            >
+              We've had the privilege of working with several innovative
+              companies in the agricultural sector. Feel free to explore our
+              client list below.
+            </p>
+          </div>
         </div>
 
         <div class="w-full px-4">
-            <div class="flex flex-wrap justify-center items-center">
-                <a href="https://google.com" target="_blank" class="max-w-30 mx-4 py-4 grayscale opacity-70 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-                    <img src="dist/img/clients/google.webp" alt="Google">
-                </a>
-                <a href="https://gojek.com" target="_blank" class="max-w-30 mx-4 py-4 grayscale opacity-70 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-                    <img src="dist/img/clients/gojek.webp" alt="Gojek">
-                </a>
-                <a href="https://spotify.com" target="_blank" class="max-w-30 mx-4 py-4 grayscale opacity-70 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-                    <img src="dist/img/clients/spotify.webp" alt="Spotify">
-                </a>
-            </div>
+          <div class="flex flex-wrap items-center justify-center">
+            <a
+              href="https://google.com"
+              target="_blank"
+              class="mx-4 max-w-30 py-4 opacity-70 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+            >
+              <img src="dist/img/clients/google.webp" alt="Google" />
+            </a>
+            <a
+              href="https://gojek.com"
+              target="_blank"
+              class="mx-4 max-w-30 py-4 opacity-70 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+            >
+              <img src="dist/img/clients/gojek.webp" alt="Gojek" />
+            </a>
+            <a
+              href="https://spotify.com"
+              target="_blank"
+              class="mx-4 max-w-30 py-4 opacity-70 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+            >
+              <img src="dist/img/clients/spotify.webp" alt="Spotify" />
+            </a>
+          </div>
         </div>
-    </div>
- </section>
-<!-- Clients Section End -->
+      </div>
+    </section>
+    <!-- Clients Section End -->
 
-<!-- Blog Section Start -->
- <section id="blog" class="font-semibold pt-36 pb-32 bg-rose-100">
-    <div class="container mx-auto max-w-7xl">
+    <!-- Blog Section Start -->
+    <section
+      id="blog"
+      class="bg-rose-100 pt-36 pb-32 font-semibold dark:bg-mauve-900"
+    >
+      <div class="container mx-auto max-w-7xl">
         <div class="w-full px-4">
-            <div class="max-w-xl mx-auto text-center mb-16">
-                <h4 class="text-lg text-rose-700 mb-2 lg:text-2xl">Blog</h4>
-                <h2 class="font-bold text-mist-700 text-3xl mb-4 sm:text-4xl lg:text-5xl">Latest Articles</h2>
-                <p class="font-medium text-md text-mist-700 md:text-lg">Check out our latest articles on various topics. You'll find insights, tips, and updates that might interest you.</p>
-            </div>
+          <div class="mx-auto mb-16 max-w-xl text-center">
+            <h4
+              class="mb-2 text-lg text-rose-700 lg:text-2xl dark:text-rose-400"
+            >
+              Blog
+            </h4>
+            <h2
+              class="mb-4 text-3xl font-bold text-mist-700 sm:text-4xl lg:text-5xl dark:text-white"
+            >
+              Latest Articles
+            </h2>
+            <p
+              class="text-md font-medium text-mist-700 md:text-lg dark:text-stone-600"
+            >
+              Check out our latest articles on various topics. You'll find
+              insights, tips, and updates that might interest you.
+            </p>
+          </div>
         </div>
 
         <div class="flex flex-wrap">
-            <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10">
-                    <img src="dist/img/blog/lingkungan.webp" alt="Kebakaran Hutan" class="w-full h-52 object-cover">
-                    <div class="py-8 px-6">
-                        <h3>
-                            <a href="https://www.indonesiana.id/read/178272/peran-besar-budaya-masyarakat-sekitar-terhadap-kelestarian-lingkungan" target="_blank" class="block mb-3 text-xl text-mist-900 hover:text-rose-700 truncate">Peran Besar Budaya Masyarakat Sekitar Terhadap Kelestarian Lingkungan</a>
-                        </h3>
-                        <p class="text-base text-mist-700 font-medium mb-3">Budaya atau kebudayaan menurut Bronislaw Malinowski adalah penyelesaian manusia terhadap . . .</p>
-                        <a href="https://www.indonesiana.id/read/178272/peran-besar-budaya-masyarakat-sekitar-terhadap-kelestarian-lingkungan" target="_blank" class="text-rose-700 font-medium hover:underline text-xl rounded-lg">Read More</a>
-                    </div>
-                </div>
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div
+              class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-stone-600"
+            >
+              <img
+                src="dist/img/blog/lingkungan.webp"
+                alt="Kebakaran Hutan"
+                class="h-52 w-full object-cover"
+              />
+              <div class="px-6 py-8">
+                <h3>
+                  <a
+                    href="https://www.indonesiana.id/read/178272/peran-besar-budaya-masyarakat-sekitar-terhadap-kelestarian-lingkungan"
+                    target="_blank"
+                    class="mb-3 block truncate text-xl text-mist-900 hover:text-rose-700 dark:text-white dark:hover:text-mauve-900"
+                    >Peran Besar Budaya Masyarakat Sekitar Terhadap Kelestarian
+                    Lingkungan</a
+                  >
+                </h3>
+                <p
+                  class="mb-3 text-base font-medium text-mist-700 dark:text-mauve-300"
+                >
+                  Budaya atau kebudayaan menurut Bronislaw Malinowski adalah
+                  penyelesaian manusia terhadap . . .
+                </p>
+                <a
+                  href="https://www.indonesiana.id/read/178272/peran-besar-budaya-masyarakat-sekitar-terhadap-kelestarian-lingkungan"
+                  target="_blank"
+                  class="rounded-lg text-xl font-medium text-rose-700 hover:underline hover:brightness-150 dark:text-rose-400"
+                  >Read More</a
+                >
+              </div>
             </div>
+          </div>
 
-            <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10">
-                    <img src="dist/img/blog/kopi.webp" alt="Kopi di Cafe" class="w-full h-52 object-cover">
-                    <div class="py-8 px-6">
-                        <h3>
-                            <a href="https://www.indonesiana.id/read/177052/mengapa-orang-orang-di-cafe-hanya-pesan-kopi" target="_blank" class="block mb-3 text-xl text-mist-900 hover:text-rose-700 truncate">Mengapa Orang-orang di Cafe Hanya Pesan Kopi?</a>
-                        </h3>
-                        <p class="text-base text-mist-700 font-medium mb-3">“Kau tahu, aku pikir semuanya akan berjalan lancar!” Wanita yang tiba-tiba berteriak di depan wajahku, mengejutkan . . .</p>
-                        <a href="https://www.indonesiana.id/read/177052/mengapa-orang-orang-di-cafe-hanya-pesan-kopi" target="_blank" class="text-rose-700 font-medium hover:underline text-xl rounded-lg">Read More</a>
-                    </div>
-                </div>
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div
+              class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-stone-600"
+            >
+              <img
+                src="dist/img/blog/kopi.webp"
+                alt="Kopi di Cafe"
+                class="h-52 w-full object-cover"
+              />
+              <div class="px-6 py-8">
+                <h3>
+                  <a
+                    href="https://www.indonesiana.id/read/177052/mengapa-orang-orang-di-cafe-hanya-pesan-kopi"
+                    target="_blank"
+                    class="mb-3 block truncate text-xl text-mist-900 hover:text-rose-700 dark:text-white dark:hover:text-mauve-900"
+                    >Mengapa Orang-orang di Cafe Hanya Pesan Kopi?</a
+                  >
+                </h3>
+                <p
+                  class="mb-3 text-base font-medium text-mist-700 dark:text-mauve-300"
+                >
+                  “Kau tahu, aku pikir semuanya akan berjalan lancar!” Wanita
+                  yang tiba-tiba berteriak di depan wajahku, mengejutkan . . .
+                </p>
+                <a
+                  href="https://www.indonesiana.id/read/177052/mengapa-orang-orang-di-cafe-hanya-pesan-kopi"
+                  target="_blank"
+                  class="rounded-lg text-xl font-medium text-rose-700 hover:underline hover:brightness-150 dark:text-rose-400"
+                  >Read More</a
+                >
+              </div>
             </div>
+          </div>
 
-            <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10">
-                    <img src="dist/img/blog/jembatan.webp" alt="Istidraj" class="w-full h-52 object-cover">
-                    <div class="py-8 px-6">
-                        <h3>
-                            <a href="https://www.indonesiana.id/read/170220/istidraj-peristiwa-yang-paling-menakutkan" target="_blank" class="block mb-3 text-xl text-mist-900 hover:text-rose-700 truncate">Istidraj, Peristiwa yang Paling Menakutkan</a>
-                        </h3>
-                        <p class="text-base text-mist-700 font-medium mb-3">Pernahkan anda tidak dihiraukan oleh keluarga anda? Pasangan anda? Sedih bukan. Bagaimana jika Sang Pencipta . . .</p>
-                        <a href="https://www.indonesiana.id/read/170220/istidraj-peristiwa-yang-paling-menakutkan" target="_blank" class="text-rose-700 font-medium hover:underline text-xl rounded-lg">Read More</a>
-                    </div>
-                </div>
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div
+              class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-stone-600"
+            >
+              <img
+                src="dist/img/blog/jembatan.webp"
+                alt="Istidraj"
+                class="h-52 w-full object-cover"
+              />
+              <div class="px-6 py-8">
+                <h3>
+                  <a
+                    href="https://www.indonesiana.id/read/170220/istidraj-peristiwa-yang-paling-menakutkan"
+                    target="_blank"
+                    class="mb-3 block truncate text-xl text-mist-900 hover:text-rose-700 dark:text-white dark:hover:text-mauve-900"
+                    >Istidraj, Peristiwa yang Paling Menakutkan</a
+                  >
+                </h3>
+                <p
+                  class="mb-3 text-base font-medium text-mist-700 dark:text-mauve-300"
+                >
+                  Pernahkan anda tidak dihiraukan oleh keluarga anda? Pasangan
+                  anda? Sedih bukan. Bagaimana jika Sang Pencipta . . .
+                </p>
+                <a
+                  href="https://www.indonesiana.id/read/170220/istidraj-peristiwa-yang-paling-menakutkan"
+                  target="_blank"
+                  class="rounded-lg text-xl font-medium text-rose-700 hover:underline hover:brightness-150 dark:text-rose-400"
+                  >Read More</a
+                >
+              </div>
             </div>
+          </div>
         </div>
-    </div>
- </section>
-<!-- Blog Section End -->
+      </div>
+    </section>
+    <!-- Blog Section End -->
 
-<!-- Contact Section Start -->
- <section id="contact" class="font-semibold pt-36 pb-30">
-    <div class="container mx-auto max-w-7xl">
+    <!-- Contact Section Start -->
+    <section id="contact" class="pt-36 pb-30 font-semibold dark:bg-mauve-950">
+      <div class="container mx-auto max-w-7xl">
         <div class="w-full px-4">
-            <div class="max-w-xl mx-auto text-center mb-14">
-                <h4 class="text-lg text-rose-700 mb-2 lg:text-2xl">Contact</h4>
-                <h2 class="font-bold text-mist-700 text-3xl mb-4 sm:text-4xl lg:text-5xl">Get In Touch</h2>
-                <p class="font-medium text-md text-mist-700 md:text-lg">Have questions or want to work with us? Fill out the form below and we'll get back to you as soon as possible.</p>
-            </div>
+          <div class="mx-auto mb-14 max-w-xl text-center">
+            <h4
+              class="mb-2 text-lg text-rose-700 lg:text-2xl dark:text-rose-400"
+            >
+              Contact
+            </h4>
+            <h2
+              class="mb-4 text-3xl font-bold text-mist-700 sm:text-4xl lg:text-5xl dark:text-white"
+            >
+              Get In Touch
+            </h2>
+            <p
+              class="text-md font-medium text-mist-700 md:text-lg dark:text-stone-600"
+            >
+              Have questions or want to work with us? Fill out the form below
+              and we'll get back to you as soon as possible.
+            </p>
+          </div>
         </div>
 
-        <div class="w-full mb-8 px-4">
-            <div class="max-w-xl mx-auto mb-3">
+        <div class="mb-8 w-full px-4">
+          <div class="mx-auto mb-3 max-w-xl">
             <form action="https://httpbin.org/get" method="get">
-                <label for="name" class="text-mist-700 text-sm lg:text-base">Name</label>
-                <input type="text" name="name" id="name" placeholder="Your Name" class="w-full px-4 py-2 mb-4 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-700 bg-rose-100 text-sm lg:text-base">
+              <label
+                for="name"
+                class="text-sm text-mist-700 lg:text-base dark:text-stone-600"
+                >Name</label
+              >
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Your Name"
+                class="mt-1 mb-4 w-full rounded-lg border bg-rose-100 px-4 py-2 text-sm focus:ring-2 focus:ring-rose-700 focus:outline-none lg:text-base dark:bg-mauve-300 dark:focus:ring-mauve-700"
+              />
             </form>
-            </div>
+          </div>
 
-            <div class="max-w-xl mx-auto mb-3">
+          <div class="mx-auto mb-3 max-w-xl">
             <form action="https://httpbin.org/get" method="get">
-                <label for="email" class="text-mist-700 text-sm lg:text-base">Email</label>
-                <input type="email" name="email" id="email" placeholder="Your Email" class="w-full px-4 py-2 mb-4 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-700 bg-rose-100 text-sm lg:text-base">
+              <label
+                for="email"
+                class="text-sm text-mist-700 lg:text-base dark:text-stone-600"
+                >Email</label
+              >
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Your Email"
+                class="mt-1 mb-4 w-full rounded-lg border bg-rose-100 px-4 py-2 text-sm focus:ring-2 focus:ring-rose-700 focus:outline-none lg:text-base dark:bg-mauve-300 dark:focus:ring-mauve-700"
+              />
             </form>
-            </div>
+          </div>
 
-            <div class="max-w-xl mx-auto mb-3">
+          <div class="mx-auto mb-3 max-w-xl">
             <form action="https://httpbin.org/get" method="get">
-                <label for="message" class="text-mist-700 text-sm lg:text-base">Message</label>
-                <textarea name="message" id="message" placeholder="Your Message" class="w-full px-4 py-2 mb-4 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-700 bg-rose-100 text-sm lg:text-base"></textarea>
+              <label
+                for="message"
+                class="text-sm text-mist-700 lg:text-base dark:text-stone-600"
+                >Message</label
+              >
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Your Message"
+                class="mt-1 mb-4 w-full rounded-lg border bg-rose-100 px-4 py-2 text-sm focus:ring-2 focus:ring-rose-700 focus:outline-none lg:text-base dark:bg-mauve-300 dark:focus:ring-mauve-700"
+              ></textarea>
             </form>
-            </div>
+          </div>
 
-            <div class="max-w-xl mx-auto mb-16">
-                <button type="submit" class="bg-rose-700 text-white px-6 py-3 rounded-lg hover:bg-rose-800 focus:outline-none focus:ring-2 focus:ring-rose-700 hover:cursor-pointer text-sm lg:text-base">Submit</button>
-            </div>
+          <div class="mx-auto mb-16 max-w-xl">
+            <button
+              type="submit"
+              class="rounded-lg bg-rose-700 px-6 py-3 text-sm text-white hover:cursor-pointer hover:bg-rose-800 focus:ring-2 focus:ring-rose-500 focus:outline-none lg:text-base dark:bg-rose-400 dark:hover:bg-rose-500 dark:focus:ring-rose-200"
+            >
+              Submit
+            </button>
+          </div>
         </div>
-    </div>
- </section>
-<!-- Contact Section End -->
+      </div>
+    </section>
+    <!-- Contact Section End -->
 
-<!-- Footer Start -->
- <footer class="bg-dark pt-24 pb-10">
-    <div class="container mx-auto max-w-7xl">
+    <!-- Footer Start -->
+    <footer class="bg-dark pt-24 pb-10 dark:bg-mauve-300">
+      <div class="container mx-auto max-w-7xl">
         <div class="flex flex-wrap">
-            <div class="w-full px-4 mb-12 md:w-1/2">
-                <h2 class="font-bold text-white text-3xl lg:text-[45px] mb-4">Dela</h2>
-                <h3 class="font-bold text-4xl lg:text-[50px] mb-2 text-stone-400">Contact Me</h3>
-                <p class="text-stone-400 text-sm lg:text-base">delatri@gmail.com</p>
-                <address class="text-stone-400 text-sm lg:text-base">Perumahan Kota Mandiri Bekala, Jalan Merica Raya <br> Medan, Sumatera Utara, Indonesia</address>
-            </div>
+          <div class="mb-12 w-full px-4 md:w-1/2">
+            <h2
+              class="mb-4 text-3xl font-bold text-white lg:text-[45px] dark:text-rose-400"
+            >
+              Dela
+            </h2>
+            <h3
+              class="mb-2 text-4xl font-bold text-stone-400 lg:text-[50px] dark:text-stone-600"
+            >
+              Contact Me
+            </h3>
+            <p class="text-sm text-stone-400 lg:text-base dark:text-stone-600">
+              delatri@gmail.com
+            </p>
+            <address
+              class="text-sm text-stone-400 lg:text-base dark:text-stone-600"
+            >
+              Perumahan Kota Mandiri Bekala, Jalan Merica Raya <br />
+              Medan, Sumatera Utara, Indonesia
+            </address>
+          </div>
 
-            <div class="w-full px-4 mb-12 md:w-1/2">
-                <h3 class="font-bold text-xl lg:text-[28px] mb-5 text-stone-400">Links</h3>
-                <ul class="text-stone-400 text-sm">
-                    <li>
-                        <a href="#home" class="mb-2 hover:text-rose-700 transition duration-300 inline-block">Home</a>
-                    </li>
-                    <li>
-                        <a href="#about" class="mb-2 hover:text-rose-700 transition duration-300 inline-block">About</a>
-                    </li>
-                    <li>
-                        <a href="#portfolio" class="mb-2 hover:text-rose-700 transition duration-300 inline-block">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="#clients" class="mb-2 hover:text-rose-700 transition duration-300 inline-block">Clients</a>
-                    </li>
-                    <li>
-                        <a href="#blog" class="mb-2 hover:text-rose-700 transition duration-300 inline-block">Blog</a>
-                    </li>
-                    <li>
-                        <a href="#contact" class="mb-2 hover:text-rose-700 transition duration-300 inline-block">Contact</a>
-                    </li>
-                </ul>
-            </div>
+          <div class="mb-12 w-full px-4 md:w-1/2">
+            <h3
+              class="mb-5 text-xl font-bold text-stone-400 lg:text-[28px] dark:text-stone-600"
+            >
+              Links
+            </h3>
+            <ul class="text-sm text-stone-400 dark:text-stone-600">
+              <li>
+                <a
+                  href="#home"
+                  class="mb-2 inline-block transition duration-300 hover:text-rose-700 dark:hover:text-rose-400"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="mb-2 inline-block transition duration-300 hover:text-rose-700 dark:hover:text-rose-400"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#portfolio"
+                  class="mb-2 inline-block transition duration-300 hover:text-rose-700 dark:hover:text-rose-400"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#clients"
+                  class="mb-2 inline-block transition duration-300 hover:text-rose-700 dark:hover:text-rose-400"
+                  >Clients</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#blog"
+                  class="mb-2 inline-block transition duration-300 hover:text-rose-700 dark:hover:text-rose-400"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="mb-2 inline-block transition duration-300 hover:text-rose-700 dark:hover:text-rose-400"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="w-full pt-10 border-t border-stone-700">
+      <div class="w-full border-t border-stone-700 pt-10">
         <div class="flex items-center justify-center">
-                    <!-- Youtube -->
-                     <a href="https://youtube.com/@delatriramadhani1222" target="_blank" class="w-9 h-9 mr-3 rounded-full text-mist-500 flex justify-center items-center border border-mist-500 hover:border-rose-700 hover:bg-rose-700 hover:text-white" >
-                        <svg role="img" class="fill-current" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <title>YouTube</title>
-                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                     </a>
+          <!-- Youtube -->
+          <a
+            href="https://youtube.com/@delatriramadhani1222"
+            target="_blank"
+            class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-mist-500 text-mist-500 hover:border-rose-700 hover:bg-rose-700 hover:text-white dark:border-stone-600 dark:text-stone-600 dark:hover:border-rose-400 dark:hover:bg-rose-400"
+          >
+            <svg
+              role="img"
+              class="fill-current"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>YouTube</title>
+              <path
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+              />
+            </svg>
+          </a>
 
-                    <!-- Instagram -->
-                     <a href="https://instagram.com/delatriramadhani" target="_blank" class="w-9 h-9 mr-3 rounded-full text-mist-500 flex justify-center items-center border border-mist-500 hover:border-rose-700 hover:bg-rose-700 hover:text-white" >
-                        <svg role="img" class="fill-current" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>
-                     </a>
+          <!-- Instagram -->
+          <a
+            href="https://instagram.com/delatriramadhani"
+            target="_blank"
+            class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-mist-500 text-mist-500 hover:border-rose-700 hover:bg-rose-700 hover:text-white dark:border-stone-600 dark:text-stone-600 dark:hover:border-rose-400 dark:hover:bg-rose-400"
+          >
+            <svg
+              role="img"
+              class="fill-current"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Instagram</title>
+              <path
+                d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"
+              />
+            </svg>
+          </a>
 
-                     <!-- LinkedIn -->
-                     <a href="https://www.linkedin.com/in/dela-tri-ramadhani-hasibuan-658271425/" target="_blank" class="w-9 h-9 mr-3 rounded-full text-mist-500 flex justify-center items-center border border-mist-500 hover:border-rose-700 hover:bg-rose-700 hover:text-white" >
-                        <svg role="img" class="fill-current" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <title>LinkedIn</title>
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.889z"/></svg>
-                     </a>
+          <!-- LinkedIn -->
+          <a
+            href="https://www.linkedin.com/in/dela-tri-ramadhani-hasibuan-658271425/"
+            target="_blank"
+            class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-mist-500 text-mist-500 hover:border-rose-700 hover:bg-rose-700 hover:text-white dark:border-stone-600 dark:text-stone-600 dark:hover:border-rose-400 dark:hover:bg-rose-400"
+          >
+            <svg
+              role="img"
+              class="fill-current"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>LinkedIn</title>
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.889z"
+              />
+            </svg>
+          </a>
 
-                     <!-- TikTok -->
-                     <a href="https://www.tiktok.com/@delaaa.9" target="_blank" class="w-9 h-9 mr-3 rounded-full text-mist-500 flex justify-center items-center border border-mist-500 hover:border-rose-700 hover:bg-rose-700 hover:text-white" >
-                        <svg role="img" class="fill-current" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>TikTok</title><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
-                     </a>
+          <!-- TikTok -->
+          <a
+            href="https://www.tiktok.com/@delaaa.9"
+            target="_blank"
+            class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-mist-500 text-mist-500 hover:border-rose-700 hover:bg-rose-700 hover:text-white dark:border-stone-600 dark:text-stone-600 dark:hover:border-rose-400 dark:hover:bg-rose-400"
+          >
+            <svg
+              role="img"
+              class="fill-current"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>TikTok</title>
+              <path
+                d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
+              />
+            </svg>
+          </a>
 
-                     <!-- Gmail -->
-                     <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" class="w-9 h-9 mr-3 rounded-full text-mist-500 flex justify-center items-center border border-mist-500 hover:border-rose-700 hover:bg-rose-700 hover:text-white" >
-                        <svg role="img" class="fill-current" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Gmail</title><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
-                     </a>
+          <!-- Gmail -->
+          <a
+            href="https://mail.google.com/mail/u/0/#inbox"
+            target="_blank"
+            class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-mist-500 text-mist-500 hover:border-rose-700 hover:bg-rose-700 hover:text-white dark:border-stone-600 dark:text-stone-600 dark:hover:border-rose-400 dark:hover:bg-rose-400"
+          >
+            <svg
+              role="img"
+              class="fill-current"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Gmail</title>
+              <path
+                d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"
+              />
+            </svg>
+          </a>
         </div>
 
-        <p class="text-center text-[12px] text-stone-700 pt-4">Created by <span class="font-bold text-rose-700">&copy; Dela Tri Ramadhani Hasibuan</span>, using  <a href="https://tailwindcss.com/" target="_blank" class="text-rose-700 hover:underline font-bold hover:brightness-150">Tailwind CSS</a></p>
-    </div>
- </footer>
-<!-- Footer End -->
+        <p class="pt-4 text-center text-[12px] text-stone-700">
+          Created by
+          <span class="font-bold text-rose-700 dark:text-rose-400"
+            >&copy; Dela Tri Ramadhani Hasibuan</span
+          >, using
+          <a
+            href="https://tailwindcss.com/"
+            target="_blank"
+            class="font-bold text-rose-700 hover:underline hover:brightness-150 dark:text-rose-400"
+            >Tailwind CSS</a
+          >
+        </p>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Back to to Start -->
+    <a
+      href="#home"
+      class="fixed right-4 bottom-4 z-9999 hidden h-14 w-14 items-center justify-center rounded-full bg-rose-700 p-4 hover:animate-pulse dark:bg-rose-400"
+      id="to-top"
+    >
+      <span class="mt-2 block h-5 w-5 rotate-45 border-t-2 border-l-2"></span>
+    </a>
+    <!-- Back to top End -->
 
     <script src="dist/js/script.js"></script>
-
-</body>
+  </body>
 </html>
